@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="index.php?controller=user&action=detail&id=<?php echo $_SESSION['user']['id']?>" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
                                 <a href="index.php?controller=user&action=logout" class="btn btn-default btn-flat">Sign
