@@ -1,16 +1,16 @@
-<h2>Thêm mới sản phẩm</h2>
+<h2>Thêm mới sách</h2>
 <form action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="category_id">Chọn danh mục</label>
-        <select name="category_id" class="form-control" id="category_id">
-            <?php foreach ($categories as $category):
+        <label for="danhmucsach_id">Chọn danh mục sách</label>
+        <select name="danhmucsach_id" class="form-control" id="danhmucsach_id">
+            <?php foreach ($danhmucsachs as $danhmucsach):
                 $selected = '';
-                if (isset($_POST['category_id']) && $category['id'] == $_POST['category_id']) {
+                if (isset($_POST['danhmucsach_id']) && $danhmucsach['id'] == $_POST['danhmucsach_id']) {
                     $selected = 'selected';
                 }
                 ?>
-                <option value="<?php echo $category['id'] ?>" <?php echo $selected; ?>>
-                    <?php echo $category['name'] ?>
+                <option value="<?php echo $danhmucsach['id'] ?>" <?php echo $selected; ?>>
+                    <?php echo $danhmucsach['name'] ?>
                 </option>
             <?php endforeach; ?>
         </select>

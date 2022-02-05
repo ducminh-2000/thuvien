@@ -1,15 +1,15 @@
-<h2>Cập nhật sản phẩm</h2>
+<h2>Cập nhật sách</h2>
 <form action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="category_id">Chọn danh mục</label>
-        <select name="category_id" class="form-control" id="category_id">
+        <label for="danhmucsach_id">Chọn danh mục</label>
+        <select name="danhmucsach_id" class="form-control" id="danhmucsach_id">
           <?php
           foreach ($danhmucsachs as $danhmucsach):
             $selected = '';
-            if ($danhmucsach['id'] == $sach['category_id']) {
+            if ($danhmucsach['id'] == $sach['danhmucsach_id']) {
               $selected = 'selected';
             }
-            if (isset($_POST['category_id']) && $danhmucsach['id'] == $_POST['category_id']) {
+            if (isset($_POST['danhmucsach_id']) && $danhmucsach['id'] == $_POST['danhmucsach_id']) {
               $selected = 'selected';
             }
             ?>

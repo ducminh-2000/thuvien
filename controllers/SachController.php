@@ -266,40 +266,6 @@ class SachController extends Controller
     if (isset($_GET['danhmucsach_id'])) {
       $query_additional .= '&danhmucsach_id=' . $_GET['danhmucsach_id'];
     }
-    // if (isset($_GET['name'])) {
-    //   $query_additional .= '&name=' . $_POST['name'];
-    // }
-    //nếu user có hành động filter
-    // if (isset($_POST['submit'])) {
-    //   $params['name'] = $_POST['name'];
-    //   if (isset($_POST['danhMuc'])) {
-    //     $danhMuc = implode(',', $_POST['danhMuc']);
-    //     //chuyển thành chuỗi sau để sử dụng câu lệnh in_array
-    //     $str_danhMuc_id = "($danhMuc)";
-    //     $params['danhmucsach'] = $str_danhMuc_id;
-    //   }
-    //   if (isset($_POST['xuatBan'])) {
-    //     $str_xuatBan = '';
-    //     foreach ($_POST['xuatBan'] AS $xuatBan) {
-    //       if ($xuatBan == 1) {
-    //         $str_xuatBan .= " OR sach.xuatBan < 2000";
-    //       }
-    //       if ($xuatBan == 2) {
-    //         $str_xuatBan .= " OR ( sach.xuatBan >= 2000 AND sach.xuatBan < 2010)";
-    //       }
-    //       if ($xuatBan == 3) {
-    //         $str_xuatBan .= " OR ( sach.xuatBan >= 2010 AND sach.xuatBan < 2020)";
-    //       }
-    //       if ($xuatBan == 4) {
-    //         $str_xuatBan .= " OR  sach.xuatBan >= 2020";
-    //       }
-    //     }
-    //     //cắt bỏ từ khóa OR ở vị trí ban đầu
-    //     $str_xuatBan = substr($str_xuatBan, 3);
-    //     $str_xuatBan = "($strxuatBan)";
-    //     $params['xuatBan'] = $str_xuatBan;
-    //   }
-    // }
     
     $params_pagination = [
       'total' => $count_total,

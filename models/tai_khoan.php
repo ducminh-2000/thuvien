@@ -92,7 +92,7 @@ VALUES(:username, :pass, :name, :roleId)");
         return $obj_delete->execute();
     }
 
-    public function getUserByUsername($username) {
+    public function getAccountByUsername($username) {
         $obj_select = $this->connection
             ->prepare("SELECT COUNT(id) FROM tai_khoan WHERE username='$username'");
         $obj_select->execute();
